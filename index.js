@@ -26,4 +26,7 @@ app.use(session({
   secret: config.sessionSecret }));
 
 
-app.post('/api/login', userCtrl.login)
+app.post('/api/login', userCtrl.login);
+// app.get('/api/profiles', profileCtrl.getFriendsProfiles)
+
+app.use(express.static(__dirname + '/public'));

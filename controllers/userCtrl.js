@@ -25,6 +25,7 @@ module.exports = {
 
   login:function(req, res, next){
     users.forEach(function(element){
+      console.log('this is req.body', req.body)
       // console.log('this is element', element);
       // console.log('this is index', index)
       // console.log('this is element.name', element.name)
