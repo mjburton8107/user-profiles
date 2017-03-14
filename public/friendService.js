@@ -2,6 +2,7 @@ angular.module('userProfiles')
 .service('friendService', function( $http ) {
 
 
+
     this.login = function( user ) {
       /* FIX ME */
       return $http({
@@ -11,8 +12,18 @@ angular.module('userProfiles')
       })
     };
 
-    this.getFriends = function() {
-    	/* FIX ME */
+
+    this.getFriends = function(user) {
+    	return $http({
+        method: 'POST',
+        url: '/api/login',
+        data: {name: user.name, password: user.password}
+      }).then(function(response){
+        console.log('this is response.data', response.data);
+        return response.data
+      })
     };
+
+    this.currentUser = this.getFriends();
 
 });

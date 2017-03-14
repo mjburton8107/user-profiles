@@ -23,24 +23,7 @@ var profiles = [
 
 module.exports = {
 
-//   getFriendsProfiles:function(req, res, next){
-//     var arrayOfFriends = profiles.map(function(obj){
-//       var newObj = {};
-//       if req.session.currentUser.friends === profiles
-//     });
-//      req.session.currentUser.forEach(function(element){
-//        if(profiles.)
-//      })
-//      profiles.forEach(function(element){
-//       if(req.sessions.currentUser.indexOf(element.friends) !== -1){
-//         arrayOfFriends.push(element.friends);
-//       }
-//     };
-//     res.send({
-//   currentUser: req.session.currentUser,
-//   friends: yourArrayOfFriendObjects
-//   });
-// }
+// req.session.currentUser.friends.
 
 
 }

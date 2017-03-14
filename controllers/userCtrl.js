@@ -32,11 +32,15 @@ module.exports = {
       if(element.name === req.body.name && element.password === req.body.password){
         req.session.currentUser = element;
         console.log('this is req.session.currentUser', req.session.currentUser)
-        res.send({ userFound: true });
+        next()
       }
 
     })
       res.send({ userFound: false });
+  },
+  userName: function(req,res,next){
+    res.send({ userFound: true,
+                currentUser: req.session.currentUser});
   }
 
 }
